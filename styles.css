@@ -22,42 +22,108 @@ body {
   );
 }
 
-nav {
-  position: absolute;
+
+
+.navbar {
+  display: flex;
+  position: fixed;
   width: 100%;
-  max-width: 1200px;
-  min-height: 85px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 2rem 1rem;
-  display: flex;
+  top: 0;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
-  z-index: 1;
+  background-color: transparent;
+  color:#ffffff;
+  z-index: 1000;
 }
 
-.nav__links {
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+  margin-left: 33%;
+  text-decoration:underline;
+  text-transform:unset;
+}
+
+.navbar-links {
+  height: 100%;
+  margin-right: 7%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
 }
 
-.link a {
-  padding: 1rem;
-  padding-top: 2rem;
-  color: var(--white);
+.navbar-links li a {
+  display: block;
   text-decoration: none;
-  transition: 0.3s;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  color: white;
+  padding: 1rem;
 }
 
-.link a:hover {
-  background-color: var(--secondary-color);
+.navbar-links li:hover {
+  background-color: #555;
 }
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #0c1c10;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+      background-color: #0c1c10;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+}
+
+
 
 .container {
   min-height: 100vh;
@@ -75,7 +141,7 @@ nav {
 .left__content {
   margin: 5rem 3rem 0 auto;
   padding: 1rem;
-  max-width: 450px;
+  /* max-width: 80px; */
   text-align: right;
 }
 
