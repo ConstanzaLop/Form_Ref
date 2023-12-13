@@ -146,3 +146,26 @@ nav {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
+
+.secondary__btn {
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.socials span {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials span:hover {
+  color: var(--secondary-color);
+}
