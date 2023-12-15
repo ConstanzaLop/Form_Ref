@@ -132,7 +132,7 @@ body {
 
 .container__left {
   flex: 1;
-  background-image: url("assets/camion2\ -\ copia.png");
+  background-image: url("assets/camion.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -144,6 +144,8 @@ body {
   /* max-width: 80px; */
   text-align: right;
 }
+
+
 
 .left__content h4 {
   margin-bottom: 1rem;
@@ -160,6 +162,8 @@ body {
   flex: 1.1;
   position: relative;
 }
+
+
 
 .container__right img {
   position: absolute;
